@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:p1_donut_app_geisler_quintal/Utilis/my_tab.dart';
+import '../tab/donut_tab.dart';
+import '../tab/burger_tab.dart';
+import '../tab/smoothie_tab.dart';
+import '../tab/pancakes_tab.dart';
+import '../tab/pizza_tab.dart';
 
 class HomePages extends StatefulWidget {
   const HomePages({super.key});
@@ -69,10 +74,18 @@ class _HomePagesState extends State<HomePages> {
             ),
           ),
           //Tab bar
-          TabBar(tabs: myTabs)
+          TabBar(tabs: myTabs),
           //Tab bar view
-
-          //Total del carrito
+          const Expanded(
+              child: TabBarView(children: [
+            DonutTab(),
+            BurgerTab(),
+            SmoothieTab(),
+            PanCakesTab(),
+            PizzaTab()
+          ])
+              //Total del carrito
+              )
         ]),
       ),
     );
