@@ -18,22 +18,27 @@ class _HomePagesState extends State<HomePages> {
     //donutTab
     const MyTab(
       iconPath: 'lib/icons/donut.png',
+      label: 'Donut',
     ),
     //burgerTab
     const MyTab(
       iconPath: 'lib/icons/burger.png',
+      label: 'Burguer',
     ),
     //smoothieab
     const MyTab(
       iconPath: 'lib/icons/smoothie.png',
+      label: 'Smoothie',
     ),
     //pancakeTab
     const MyTab(
       iconPath: 'lib/icons/pancakes.png',
+      label: 'PanCake',
     ),
     //pizzaTab
     const MyTab(
       iconPath: 'lib/icons/pizza.png',
+      label: 'Pizza',
     ),
   ];
 
@@ -61,7 +66,7 @@ class _HomePagesState extends State<HomePages> {
         body: Column(children: [
           //texto " I want to it"
           const Padding(
-            padding: const EdgeInsets.all(24.0),
+            padding: EdgeInsets.all(24.0),
             child: Row(
               children: [
                 Text("I want to ", style: TextStyle(fontSize: 24)),
