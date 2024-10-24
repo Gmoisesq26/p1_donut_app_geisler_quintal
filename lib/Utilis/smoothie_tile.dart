@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 
-class DonutTile extends StatelessWidget {
-  final String donutFlavor;
-  final String donutPrice;
-  final dynamic donutColor;
-  final String imageName;
+class SmoothieTile extends StatelessWidget {
+  final String smoothiesFlavor;
+  final String smoothiesPrice;
+  final dynamic smoothiesColor;
+  final String smoothiesName;
   final VoidCallback onAddToCart; // Callback para agregar al carrito
   final VoidCallback
       onFavoriteToggle; // Callback para cambiar el estado del favorito
 
   // Constructor para recibir los valores
-  const DonutTile({
+  const SmoothieTile({
     super.key,
-    required this.donutFlavor,
-    required this.donutPrice,
-    required this.donutColor,
-    required this.imageName,
+    required this.smoothiesFlavor,
+    required this.smoothiesPrice,
+    required this.smoothiesColor,
+    required this.smoothiesName,
     required this.onAddToCart,
     required this.onFavoriteToggle, // Para manejar el icono de favorito
   });
@@ -26,7 +26,8 @@ class DonutTile extends StatelessWidget {
       padding: const EdgeInsets.all(12),
       child: Container(
         decoration: BoxDecoration(
-            color: donutColor[100], borderRadius: BorderRadius.circular(24)),
+            color: smoothiesColor[100],
+            borderRadius: BorderRadius.circular(24)),
         child: Column(
           children: [
             Row(
@@ -34,18 +35,18 @@ class DonutTile extends StatelessWidget {
               children: [
                 Container(
                   decoration: BoxDecoration(
-                      color: donutColor[200],
+                      color: smoothiesColor[200],
                       borderRadius: const BorderRadius.only(
                           topRight: Radius.circular(24),
                           bottomLeft: Radius.circular(24))),
                   padding:
                       const EdgeInsets.symmetric(vertical: 8, horizontal: 18),
                   child: Text(
-                    "\$$donutPrice",
+                    "\$$smoothiesPrice",
                     style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
-                        color: donutColor[800]),
+                        color: smoothiesColor[800]),
                   ),
                 )
               ],
@@ -53,11 +54,11 @@ class DonutTile extends StatelessWidget {
             //Donut picture
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-              child: Image.asset(imageName),
+              child: Image.asset(smoothiesName),
             ),
             //Donut flavor Tex
             Text(
-              donutFlavor,
+              smoothiesFlavor,
               style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),
             Text("Dukin's", style: TextStyle(color: Colors.grey[600])),
